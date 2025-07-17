@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<!--
+	Paradigm Shift by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Nils Deschrijver</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Jurist and ethical hacker from 🇧🇪 (NL/ENG).  
+DPO-certified and digital architecture expert.  
+Former lawyer and security consultant.  
+Now freelancing, but also open to in-house roles.  
+" />
+		<!--highlightjs-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/monokai_sublime.css">
+		<script defer src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="icon" type="image/png" href="images/favicon.png"/>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+
+		<!-- Consent Popup styles -->
+		<style>
+		#consent-popup {
+			position: fixed;
+			bottom: 1rem;
+			left: 1rem;
+			right: 1rem;
+			background: #222;
+			color: white;
+			padding: 1rem 1.5rem;
+			border-radius: 8px;
+			font-family: Arial, sans-serif;
+			z-index: 9999;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		#consent-popup button {
+			border: none;
+			padding: 0.5rem 1rem;
+			border-radius: 4px;
+			cursor: pointer;
+			font-weight: bold;
+			margin-left: 0.5rem;
+		}
+		#consent-accept {
+			background: #a4d1a5;
+			color: white;
+		}
+		#consent-deny {
+			background: #eeb1af;
+			color: white;
+		}
+		</style>
+
+		<!-- Consent Popup HTML -->
+		<div id="consent-popup" style="display:none;">
+		<span>Can I keep track of your browsing to gauge interest in our services? Your data will be pseudonymized.</span>
+		<div>
+			<button id="consent-accept">YES</button>
+			<button id="consent-deny">NO</button>
+		</div>
+		</div>
+
+		<script>
+		if (!localStorage.getItem('ga_consent')) {
+			document.getElementById('consent-popup').style.display = 'flex';
+		} else if (localStorage.getItem('ga_consent') === 'true') {
+			loadGA();
+		}
+
+		document.getElementById('consent-accept').addEventListener('click', function() {
+			localStorage.setItem('ga_consent', 'true');
+			document.getElementById('consent-popup').style.display = 'none';
+			loadGA();
+		});
+
+		document.getElementById('consent-deny').addEventListener('click', function() {
+			// User denies consent, just hide popup, do NOT set localStorage consent
+			document.getElementById('consent-popup').style.display = 'none';
+		});
+
+		function loadGA() {
+			var gtagScript = document.createElement('script');
+			gtagScript.async = true;
+			gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-NL2Q58RE8X";
+			document.head.appendChild(gtagScript);
+
+			gtagScript.onload = function() {
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			window.gtag = gtag;
+
+			gtag('js', new Date());
+			gtag('config', 'G-NL2Q58RE8X', { 'anonymize_ip': true });
+			};
+		}
+		</script>
+				
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section class="intro">
+						<header>
+							<h1>Nils Deschrijver</h1>
+														<h2>Data Protection Consultant | GDPR | DPIA | Data Breaches &nbsp;&bull;&nbsp; Legal Engineer</h2>
+																					<p>Jurist and ethical hacker from 🇧🇪 (NL/ENG).  
+DPO-certified and digital architecture expert.  
+Former lawyer and security consultant.  
+Now freelancing, but also open to in-house roles.  
+</p>
+																						<ul class="icons">
+																		<li><a href="https://github.com/N1lsDschrvr" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+																																																																								<li><a href="https://www.linkedin.com/in/nilsdeschrijver/" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+																											 
+									<li><a href="mailto:info@legalengineer.be" class="icon solid fa-envelope" target="_blank"><span class="label">email</span></a></li>
+																		 
+									<li><a href="tel:+32 498 02 79 83" class="icon solid fa-phone" target="_blank"><span class="label">phone</span></a></li>
+																	</ul>
+
+				<!-- Over ons block inserted here -->
+				<div class="font-light space-y-2">
+				<div class="flex items-center gap-2">
+					<i class="fa-solid fa-location-dot"></i>
+					Tulpenlaan <span style="filter: blur(3px);" title="Huisnummer op aanvraag wegens privacyredenen">15</span>, 2180 Antwerpen, België
+				</div>
+				<div class="flex items-center gap-2">
+					<i class="fa-solid fa-circle-info"></i>
+					<b>BTW: <span>BE 0839.88.36.06</span></b>
+				</div>
+				</div>
+				<!-- End Over ons block -->
+																	
+														<ul class="actions">
+								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+							</ul>
+						</header>
+						<div class="content" style="min-height:100%;">
+														<span class="image fill" data-position="center"><img src="images/bg.png" alt="Nils Deschrijver" /></span>
+													</div>
+					</section>
+
+				
+									<section id="first">
+					
+    <header>
+        <h2>Projects</h2>
+    </header>
+    <div class="content">
+        
+
+
+
+    <div style="display: flex; align-items: center; gap: 25px; padding: 10px; padding-bottom: 25px; border-bottom: 1px solid rgb(238, 238, 238);">
+    <img src="images/zl.svg" alt="Project logo" style="max-height: 65px; width: auto; border: 1px solid rgb(36, 39, 41); padding: 3px;">
+    <h2 style="margin: 0; font-size: 1.0em;">Zelf-loodgieter.be: coded an e-commerce platform with integrated data analytics</h2>
+</div>
+
+<p>Coded in Python using Flask-RESTX, SQLAlchemy, SendGrid, Mollie, and the Google Analytics Measurement Protocol. Deployed on a bare-metal VPS after configuring the system and setting up a database following star schema best practices.</p>
+<p><span style="background-color:rgb(224, 255, 248);"><i>Privacy by Design and by Default were central to this fully GDPR-compliant project. Web application and server security, as well as the drafting of legal compliance documentation, were handled in-house.</i></span></p>
+<p>In collaboration with a Belgian building materials wholesaler and an Antwerp-based trade school.</p>
+            <a href="https://gist.github.com/N1lsDschrvr/fb9b2988d6010bbc54388b8a6feec69c" class="icon solid fa-link" target="_blank"><span class="label"></span></a>
+        
+    
+
+
+
+    <div style="display: flex; align-items: center; gap: 25px; padding: 10px; padding-bottom: 25px; border-bottom: 1px solid rgb(238, 238, 238); margin-top: 20px;">
+    <img src="images/terminal.png" alt="Project logo" style="max-height: 75px; width: auto; padding: 3px;">
+    <h2 style="margin: 0; font-size: 1.0em;">Confidential: Coordinated Vulnerability Disclosures</h2>
+</div>
+
+<p>Regularly identify security vulnerabilities in the wild, and then report them to the CCB/CERT and the responsible parties, under whistleblower protection legislation ('Klokkenluiderswet'), <span style="background-color:rgb(224, 255, 248);"><i>helping controllers patch their systems and properly secure personal data</i></span>.</p>
+<p>One such vulnerability, which exposed database records from dozens of companies, earned me a place in the <a href="https://ccb.belgium.be/nl/cert/bekendmaking-van-kwetsbaarheden-aan-het-ccb/wall-of-fame" target="_blank">Belgian Centre for Cybersecurity (CCB) Hall of Fame for cybersecurity researchers:</a>:</p>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7269645214082904064?collapsed=1" height="600" width="700" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+        
+    
+
+
+
+    <div style="display: flex; align-items: center; gap: 25px; padding: 10px; padding-bottom: 25px; border-bottom: 1px solid rgb(238, 238, 238); margin-top: 20px;">
+    <img src="images/ep_votes_logo.jpeg" alt="Project logo" style="max-height: 75px; width: auto; padding: 3px;">
+    <h2 style="margin: 0; font-size: 1.0em;">EP Votes: coded a mobile app to track plenary voting results</h2>
+</div>
+
+<p>A light-weight but powerful office tool that searched for, read through and analysed scores of plenary voting results of the European Parliament. Coded in Python and Bash using regex, for usage in the EU bubble during COVID. The tool was able to source the voting results before they were officially published, using hacking enumeration techniques.</p>
+            <a href="https://www.linkedin.com/company/ep-votes/" class="icon solid fa-link" target="_blank"><span class="label"></span></a>
+        
+</div>
+					</section>
+									
+									<section id="second">
+					
+    <header>
+        <h2>Education</h2>
+    </header>
+    <div class="content">
+    <h3>Academy of European Law (ERA) | Certificates</h3>
+    <!-- Metadata -->
+    <p> 2016 - 2016</p>
+    
+    <h3>Ghent University | Master of Laws</h3>
+    <!-- Metadata -->
+    <p> 2009 - 2011</p>
+    
+    <h3>Ghent University | Bachelor of Laws</h3>
+    <!-- Metadata -->
+    <p> 2006 - 2009</p>
+    
+    </div>
+
+					</section>
+																				
+									<section id="third">
+					
+    <header>
+        <h2>Work Experience</h2>
+    </header>
+    <div class="content">
+    <h3>Self-employed | Legal Engineer</h3>
+    <!-- Metadata -->
+    <strong><em>November 2024 - Present</em></strong>
+    <!-- Content -->
+    <p><div style="border: 2px solid #ccc; padding: 15px; border-radius: 8px; margin-top: 20px;">
+
+As a DPO-certified jurist and ethical hacker whose contributions were recently <a href="https://ccb.belgium.be/nl/cert/bekendmaking-van-kwetsbaarheden-aan-het-ccb/wall-of-fame" target="_blank">recognised by the Belgian Centre for Cybersecurity (CCB)</a>, <span style="background-color:rgb(224, 255, 248);"><i>I deliver comprehensive GDPR expertise, combining deep technical proficiency with a strong background in data analytics and security</i></span>:<br><br>
+
+<ul>
+  <li>Proactive advice on data protection requirements and related legal compliance paperwork</li>
+  <li>Tech-savy input for Data Protection Impact Assessments (DPIAs) to aid your IT and business teams in assessing and mitigating risks and avoiding fines</li>
+  <li>Guiding adherence to the Privacy by Design principle, providing early warning on GDPR implications of technical implementations avoiding a costly code refactor or system overhaul</li>
+  <li>Similarly, guiding adherence to the Privacy by Default principle for database and system administration configurations and access management policies</li>
+  <li>Managing data breach responses and any reputational fall-out, in addition to being your point-of-contact for authorities</li>
+</ul> 
+
+My approach provides clients with a distinctive blend of compliance assurance, technical resilience, and advanced risk mitigation.
+
+</div></p>
+    <h3>Johnson &amp; Johnson | Security Consultant</h3>
+    <!-- Metadata -->
+    <strong><em>February 2022 - Augustus 2024</em></strong>
+    <!-- Content -->
+    <p><p>Drafting security risk assessments on which the senior management relied to determine their (cyber)security posture in war zones or during crises. Bridged the gap between the legal, cybersecurity, and political affairs teams as the dedicated point-of-contact for the US headquarters.</p>
+<p>In the lead for <span style="background-color:rgb(224, 255, 248);"><em>drafting and implementing JnJ's first global digital strategy</em></span>, encompassing the creation of Python scripts and Power BI dashboards to collect, process, and visualise internal and external datasets, compliant with GDPR requirements.</p></p>
+    <h3>Belgian Armed Forces | Security Consultant</h3>
+    <!-- Metadata -->
+    <strong><em>September 2019 - September 2021</em></strong>
+    <!-- Content -->
+    <p><p>Drafting security risk assessments in tandem with ADIV, the Belgian military intelligence service. Held a BE, EU, and NATO SECRET security clearance.</p>
+<p>Completed specialised training at NATO School and the Belgian Intelligence and Security School in open-source intelligence (OSINT) collection and analysis, encompassing methodologies relevant to <span style="background-color:rgb(224, 255, 248);"><em>digital forensics</em></span>, think: digital reconnaissance and fingerprinting.</p></p>
+    <h3>European Parliament | Legal Advisor</h3>
+    <!-- Metadata -->
+    <strong><em>November 2014 - May 2019</em></strong>
+    <!-- Content -->
+    <p><p>Contributed to legislation within the Civil Liberties, Justice and Home Affairs Committee (LIBE), amending legislative texts and negotiating security-related files with the Commission, Parliament, and Council of Ministers during the period of GDPR legislative development, when data protection considerations were cemented in Europe's DNA. </p>
+<p>Worked on a flagship project with emphasis on <span style="background-color:rgb(224, 255, 248);"><em>information exchange between European police and intelligence services</em></span>.</p></p>
+    <h3>Self-employed | Lawyer</h3>
+    <!-- Metadata -->
+    <strong><em>September 2011 - November 2014</em></strong>
+    <!-- Content -->
+    <p><p>Advised businesses on IT law compliance, including drafting End-User License Agreements (EULAs) and Software-as-a-Service (SaaS) agreements. Managed <span style="background-color:rgb(224, 255, 248);"><em>data breaches and cyber extortion by black hat hackers</em></span>, including issuing takedown notices. Provided legal counsel on data-related matters, pre-dating GDPR, and other business topics, and represented businesses in court. </p></p>
+    </div>
+
+					</section>
+																				
+				
+								<!-- Copyright -->
+
+					<section>
+						<header>
+							<h2>Head back to the top</h2>
+							<ul class="actions">
+								<li><a href="#first" class="arrow scrolly" style="transform: rotate(180deg) scaleX(-1);"><span class="label">Next</span></a></li>
+							</ul>
+						</header>
+						<div class="content">
+
+						</div>
+					</section>
+
+					<div class="copyright"><p>&copy; Nils Deschrijver 2025. Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a>. </br>Theme: <a href="https://ezcv.readthedocs.io" target="_blank">ezcv</a>.</br><a href="Privacyverklaring.pdf" target="_blank"><b>Privacy- en cookieverklaring</b></a>.</p></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.scrolly.min.js"></script>
+			<script src="js/browser.min.js"></script>
+			<script src="js/breakpoints.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/main.js"></script>
+			<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+			
+	</body>
+</html>
