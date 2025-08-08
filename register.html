@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>GDPR Register van Verwerkingsactiviteiten</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap + FontAwesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body { background-color: #f8f9fa; }
+        .card { margin-bottom: 1.5rem; border-radius: 0.75rem; }
+        .tag {
+            display: inline-block;
+            background-color: #e0e0e0;
+            border-radius: 999px;
+            padding: 0.3em 0.9em;
+            font-size: 0.8em;
+            margin: 0.2em;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .icon-title i {
+            margin-right: 0.5rem;
+        }
+        .accordion-button.collapsed::after {
+            transform: rotate(-90deg);
+        }
+        .table-sm td, .table-sm th {
+            padding: 0.4rem;
+            vertical-align: top;
+        }
+        a { word-break: break-all; }
+        .indent-0 { margin-left: 0; }
+        .indent-1 { margin-left: 20px; }
+        .indent-2 { margin-left: 40px; }
+        .indent-3 { margin-left: 60px; }
+    </style>
+</head>
+<body class="container py-4">
+
+    <h1 class="mb-4"><i class="fa-solid fa-lock"></i> GDPR Register van Verwerkingsactiviteiten</h1>
+
+    <!-- Profiel -->
+    <div class="card border-primary">
+        <div class="card-header bg-primary text-white">
+            <i class="fa-solid fa-user-shield"></i> Verwerkingsverantwoordelijke
+        </div>
+        <div class="card-body">
+            <p><strong>Naam:</strong> Tech.nics -- https://zelf-loodgieter.be/</p>
+            <p><strong>Adres:</strong> [REDACTED], B-2180 Ekeren</p>
+            <p><strong>KBO:</strong> BE 0839.883.606</p>
+            <p><strong>Telefoon:</strong> +32 498 02 79 83</p>
+            <p><strong>Email:</strong> <a href="mailto:info@zelf-loodgieter.be">info@zelf-loodgieter.be</a></p>
+            <hr>
+            <p><strong>DPO:</strong> Nils Deschrijver (<a href="mailto:nils.deschrijver@gmail.com">nils.deschrijver@gmail.com</a>)</p>
+            <p><strong>Verantwoordelijke voor rechten betrokkenen:</strong> Nils Deschrijver</p>
+        </div>
+    </div>
+
+    <!-- Verwerkingen -->
+    
+    <div class="card border-secondary">
+        <div class="card-header bg-secondary text-white">
+            <div class="d-flex justify-content-between align-items-center">
+                <div><i class="fa-solid fa-database"></i> Verwerking #1</div>
+                <span class="tag bg-light text-dark">gerechtvaardigde belangen</span>
+            </div>
+        </div>
+        <div class="card-body">
+
+            <h5 class="icon-title"><i class="fa-solid fa-sitemap"></i> Flow:
+Website bezoeker &gt; Cloudflare &gt; Nginx [x]
+</h5>
+            <p><strong>Begin:</strong> 2025-04-18<br>
+               <strong>Einde:</strong> N/A</p>
+
+            <div class="accordion" id="accordion-1">
+                <!-- Grondslag en Beoordeling -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-grondslag-1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-grondslag-1">
+                            <i class="fa-solid fa-scale-balanced me-2"></i> Verwerkingsgrondslag en beoordeling
+                        </button>
+                    </h2>
+                    <div id="collapse-grondslag-1" class="accordion-collapse collapse show" data-bs-parent="#accordion-1">
+                        <div class="accordion-body">
+                        <p><strong>Grondslag:</strong> gerechtvaardigde_belangen</p>
+                        
+                        
+                            <p><strong>Bijkomende noodzakelijkheids- en proportionaliteitstoetsing vereist?</strong></p>
+                            <ul>
+                            <li>Toepasselijk: Ja</li>
+                            
+                            
+                                <li>Noodzakelijk: Ja</li>
+                                <li>Proportioneel: Ja</li>
+                                <li><strong>Motivering:</strong> IP verwerken is noodzakelijk om de website te kunnen serveren aan de bezoeker, in de verzoeker zijn eigen belang.
+IP verwerken is noodzakelijk om de veiligheid te waarborgen van de server en de verwerkte persoonsgegevens.
+</li>
+                            
+                            </ul>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doeleinden -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-doeleinden-1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-doeleinden-1">
+                            <i class="fa-solid fa-bullseye me-2"></i> Verwerkingsdoeleinden
+                        </button>
+                    </h2>
+                    <div id="collapse-doeleinden-1" class="accordion-collapse collapse" data-bs-parent="#accordion-1">
+                        <div class="accordion-body">
+                            <p><strong>Categorieën:</strong>
+                            
+                            
+                                
+                                <span class="tag">communicatie</span>
+                                
+                                <span class="tag">beveiliging</span>
+                                
+                            
+                            </p>
+                            <p>Cloudflare wordt gebruikt om, op de vraag van de verwerkingsverantwoordelijke, IPs van bezoekers uit Rusland en China te filteren, en dit IP-adres wordt uitgelezen door een Nginx reverse proxy zodat die server logs de oorsprong van trafiek nauwkeuriger opslaan. De ufw firewall gebruikt de Cloudflare IP-adressen, wat geen persoonsgegevens zijn.
+</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Betrokkenen -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-betrokkenen-1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-betrokkenen-1">
+                            <i class="fa-solid fa-users me-2"></i> Betrokkenen
+                        </button>
+                    </h2>
+                    <div id="collapse-betrokkenen-1" class="accordion-collapse collapse" data-bs-parent="#accordion-1">
+                        <div class="accordion-body">
+                            <p><strong>Categorie:</strong>
+                            
+                                <span class="tag">gebruikers</span>
+                            
+                            </p>
+                            <p><strong>Gevoelig:</strong> Nee</p>
+                            <p><strong>Informatieplicht:</strong>
+                                <br>Toepasselijk: Ja
+                                <br>Document: privacyverklaring
+                                <br>Wanneer geïnformeerd: bij_verzameling
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Persoonsgegevens -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-persoonsgegevens-1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-persoonsgegevens-1">
+                            <i class="fa-solid fa-id-card me-2"></i> Persoonsgegevens en beveiliging
+                        </button>
+                    </h2>
+                    <div id="collapse-persoonsgegevens-1" class="accordion-collapse collapse" data-bs-parent="#accordion-1">
+                        <div class="accordion-body">
+                            <p><strong>Categorie:</strong>
+                            
+                            
+                                <span class="tag">technische</span>
+                            
+                            </p>
+                            <p><strong>Gevoelig:</strong> Nee</p>
+                            <p><strong>Wissingstermijn:</strong> 30 dag vanaf opname_logs</p>
+                            <p><strong>Motivering:</strong> Om aanvallen, intrusies, of misbruik in kaart te kunnen brengen, en erop te kunnen reageren.
+</p>
+                            <h6><i class="fa-solid fa-shield-halved me-1"></i> Beveiligingsmaatregelen</h6>
+                            <ul>
+                                
+                                    <li>Cloudflare configuratie om APTs uit Rusland en China te weren, met noodknop bij actieve aanvallen/DDoS</li>
+                                
+                                    <li>Ufw firewall configuratie</li>
+                                
+                                    <li>Nginx configuratie met rate-limiting tegen DDoS aanvallen</li>
+                                
+                                    <li>Nginx logrotaties elke 30 dagen, met anonimisering van IP-adressen</li>
+                                
+                                    <li>Monitoring server logs met behulp van GoAccess dashboarding</li>
+                                
+                            </ul>
+                            
+                            
+                            <p><strong>Gekende inbreuken:</strong> Nee</p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ontvangers -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-ontvangers-1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-ontvangers-1">
+                            <i class="fa-solid fa-share-nodes me-2"></i> Ontvangers
+                        </button>
+                    </h2>
+                    <div id="collapse-ontvangers-1" class="accordion-collapse collapse" data-bs-parent="#accordion-1">
+                        <div class="accordion-body">
+                            <p><strong>Ontvanger:</strong> Cloudflare (andere_privé_onderneming)</p>
+                            <p><strong>Intern:</strong> Nee</p>
+
+                            <p><strong>Verwerker:</strong> Ja</p>
+                            
+                                <p>Document: <a href="https://cf-assets.www.cloudflare.com/slt3lc6tev37/3LmXORq5FW5EuJ0OT1B871/f466268011407efbc07f4fadbd1af466/Cloudflare_Customer_DPA_v6.3_June_20__2025.pdf" target="_blank">Verwerkersovereenkomst</a></p>
+                            
+
+                            <p><strong>Co-verwerkingsverantwoordelijke:</strong> Nee</p>
+                            
+
+                            <h6><i class="fa-solid fa-globe me-1"></i> Internationale doorgifte</h6>
+                            
+
+                            <p>Toepasselijk: Ja</p>
+
+                            
+                            <p>Land: VS</p>
+
+                            
+
+                            
+                                
+                                <div>
+                                    <p><strong>Adequaatheidsbesluit:</strong></p>
+                                    <ul class="indent-0">
+                                <li>
+                                    <strong>Toepasselijk:</strong>
+                                        Ja
+                                </li>
+                                </ul>
+                                </div>
+                                
+                            
+                                
+                            
+                                
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DPIA -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-dpia-1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-dpia-1">
+                            <i class="fa-solid fa-magnifying-glass me-2"></i> DPIA
+                        </button>
+                    </h2>
+                    <div id="collapse-dpia-1" class="accordion-collapse collapse" data-bs-parent="#accordion-1">
+                        <div class="accordion-body">
+                            <p><strong>Toepasselijk:</strong> Nee</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- accordion -->
+        </div>
+    </div>
+    
+    <div class="card border-secondary">
+        <div class="card-header bg-secondary text-white">
+            <div class="d-flex justify-content-between align-items-center">
+                <div><i class="fa-solid fa-database"></i> Verwerking #2</div>
+                <span class="tag bg-light text-dark">overeenkomst</span>
+            </div>
+        </div>
+        <div class="card-body">
+
+            <h5 class="icon-title"><i class="fa-solid fa-sitemap"></i> Flow:
+Website bezoeker &gt; Cloudflare &gt; Nginx &gt; Gunicorn for FlaskRestX / Node JS web app [x]
+</h5>
+            <p><strong>Begin:</strong> 2025-04-18<br>
+               <strong>Einde:</strong> N/A</p>
+
+            <div class="accordion" id="accordion-2">
+                <!-- Grondslag en Beoordeling -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-grondslag-2">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-grondslag-2">
+                            <i class="fa-solid fa-scale-balanced me-2"></i> Verwerkingsgrondslag en beoordeling
+                        </button>
+                    </h2>
+                    <div id="collapse-grondslag-2" class="accordion-collapse collapse show" data-bs-parent="#accordion-2">
+                        <div class="accordion-body">
+                        <p><strong>Grondslag:</strong> overeenkomst</p>
+                        
+                        
+                            <p><strong>Bijkomende noodzakelijkheids- en proportionaliteitstoetsing vereist?</strong></p>
+                            <ul>
+                            <li>Toepasselijk: Nee</li>
+                            
+                            
+                            </ul>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doeleinden -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-doeleinden-2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-doeleinden-2">
+                            <i class="fa-solid fa-bullseye me-2"></i> Verwerkingsdoeleinden
+                        </button>
+                    </h2>
+                    <div id="collapse-doeleinden-2" class="accordion-collapse collapse" data-bs-parent="#accordion-2">
+                        <div class="accordion-body">
+                            <p><strong>Categorieën:</strong>
+                            
+                            
+                                
+                                <span class="tag">orderverwerking</span>
+                                
+                                <span class="tag">communicatie</span>
+                                
+                                <span class="tag">facturatie</span>
+                                
+                            
+                            </p>
+                            <p>Persoonsgegevens worden verwerkt om de bestelling te kunnen afhandelen, inclusief levering via Bpost,
+om communicatie met de klant te voeren over de bestelling, 
+en om te factureren conform Belgische fiscale en boekhoudkundige wetgeving en diens bewaartermijnen.
+Ook worden de gegevens bewaard met het oog op enige rechtsvordering, in lijn met diens verjaringstermijnen.
+</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Betrokkenen -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-betrokkenen-2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-betrokkenen-2">
+                            <i class="fa-solid fa-users me-2"></i> Betrokkenen
+                        </button>
+                    </h2>
+                    <div id="collapse-betrokkenen-2" class="accordion-collapse collapse" data-bs-parent="#accordion-2">
+                        <div class="accordion-body">
+                            <p><strong>Categorie:</strong>
+                            
+                                <span class="tag">klanten</span>
+                            
+                            </p>
+                            <p><strong>Gevoelig:</strong> Nee</p>
+                            <p><strong>Informatieplicht:</strong>
+                                <br>Toepasselijk: Ja
+                                <br>Document: privacyverklaring
+                                <br>Wanneer geïnformeerd: bij_verzameling
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Persoonsgegevens -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-persoonsgegevens-2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-persoonsgegevens-2">
+                            <i class="fa-solid fa-id-card me-2"></i> Persoonsgegevens en beveiliging
+                        </button>
+                    </h2>
+                    <div id="collapse-persoonsgegevens-2" class="accordion-collapse collapse" data-bs-parent="#accordion-2">
+                        <div class="accordion-body">
+                            <p><strong>Categorie:</strong>
+                            
+                            
+                                
+                                <span class="tag">identificatiegegevens</span>
+                                
+                                <span class="tag">contactgegevens</span>
+                                
+                                <span class="tag">adresgegevens</span>
+                                
+                            
+                            </p>
+                            <p><strong>Gevoelig:</strong> Nee</p>
+                            <p><strong>Wissingstermijn:</strong> 10 jaar vanaf einde_bewaartermijn_fiscaal</p>
+                            <p><strong>Motivering:</strong> Gegevens worden bewaard conform de wettelijke fiscale bewaartermijnen en daarna geanonimiseerd of verwijderd.
+</p>
+                            <h6><i class="fa-solid fa-shield-halved me-1"></i> Beveiligingsmaatregelen</h6>
+                            <ul>
+                                
+                                    <li>De MariaDB databank is enkel toegankelijk vanaf localhost, en is dus niet met het internet verbonden</li>
+                                
+                                    <li>Toegang tot de tabel met persoonsgegevens is beperkt tot één specifieke databankgebruiker met minimaal noodzakelijke rechten</li>
+                                
+                                    <li>Back-ups worden versleuteld opgeslagen</li>
+                                
+                                    <li>Communicatie met de server is SSL geëncrypteerd</li>
+                                
+                                    <li>Server firewall, Cloudflare beveiliging, en veilige configuratie van NodeJS frontend en FlaskRestX backend (Privacy by Default and by Design)</li>
+                                
+                                    <li>Logging en monitoring van toegang en databanktransacties</li>
+                                
+                                    <li>Regelmatige updates en patches van software en *nix besturingssysteem</li>
+                                
+                            </ul>
+                            
+                            
+                            <p><strong>Gekende inbreuken:</strong> Nee</p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ontvangers -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-ontvangers-2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-ontvangers-2">
+                            <i class="fa-solid fa-share-nodes me-2"></i> Ontvangers
+                        </button>
+                    </h2>
+                    <div id="collapse-ontvangers-2" class="accordion-collapse collapse" data-bs-parent="#accordion-2">
+                        <div class="accordion-body">
+                            <p><strong>Ontvanger:</strong> Bpost (autonoom_overheidsbedrijf)</p>
+                            <p><strong>Intern:</strong> Nee</p>
+
+                            <p><strong>Verwerker:</strong> Nee</p>
+                            
+
+                            <p><strong>Co-verwerkingsverantwoordelijke:</strong> Ja</p>
+                            
+                                <p>Document: 
+                                    <a href="https://www.bpost.be/sites/default/files/privacy/Privacy_Policy_Contractual_Parcels_NL.pdf" target="_blank" rel="noopener noreferrer">
+                                    Overeenkomst
+                                    </a>
+                                </p>
+                            
+
+                            <h6><i class="fa-solid fa-globe me-1"></i> Internationale doorgifte</h6>
+                            
+
+                            <p>Toepasselijk: Nee</p>
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DPIA -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-dpia-2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-dpia-2">
+                            <i class="fa-solid fa-magnifying-glass me-2"></i> DPIA
+                        </button>
+                    </h2>
+                    <div id="collapse-dpia-2" class="accordion-collapse collapse" data-bs-parent="#accordion-2">
+                        <div class="accordion-body">
+                            <p><strong>Toepasselijk:</strong> Nee</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- accordion -->
+        </div>
+    </div>
+    
+</body>
+</html>
